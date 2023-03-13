@@ -5,7 +5,7 @@ var lowerCase = ('a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p'
 var special = ('!','@','#','$','%','^','&','*','(',')','-','_','=','+',"[",'{',']','}',';',':',"'",'"','|',',','<',".",'>','/','?');
 
 function generatePassword() {
-  var acceptCharc = [];
+  var password = [];
   var passwordLength = window.prompt("From 8-128 characters, how long do you want your password?");
 
 // Password Length Confirmation 
@@ -27,6 +27,13 @@ function generatePassword() {
     if (!numbers || !upperCase || !lowerCase || !special) {
       window.alert ("Please select 'ok' on NUMBERS, UPPER CASE, LOWER CASE, or SPECIAL CHARACTERS.")
     }
+  
+// Concat Arrays
+  password = numbers.concat(numbers);
+  password = upperCase.concat(upperCase);
+  password = lowerCase.concat(lowerCase);
+  password = special.concat(special);
+
 }
 
 // Assignment Code
