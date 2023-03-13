@@ -6,19 +6,27 @@ var special = ('!','@','#','$','%','^','&','*','(',')','-','_','=','+',"[",'{','
 
 function generatePassword() {
   var acceptCharc = [];
-  var passwordLength = window.prompt("From 8-128 characters, how long do you want your password to be?");
+  var passwordLength = window.prompt("From 8-128 characters, how long do you want your password?");
 
 // Password Length Confirmation 
     if (passwordLength < 8) {
-      window.alert ("Please select a higher number")
+      window.alert ("Please select a number from 8-128.")
     } 
     else if (passwordLength > 128) {
-      window.alert ("Please select a lower number")
+      window.alert ("Please select a number from 8-128.")
     }
     else if (isNaN(passwordLength)) {
-      window.alert ("Please choose a number.")
+      window.alert ("Please choose a number from 8-128.")
     }
   
+// Charcter Types Confirmations
+  var numbers = confirm("Would you like to include NUMBERS in your password?");
+  var upperCase = confirm("Would you like to include UPPER CASE LETTERS in your password?");
+  var lowerCase = confirm("Would you like to include LOWER CASE LETTERS in your password?");
+  var special = confirm("Would you like to include SPECIAL CHARACTERS in your password?");
+    if (!numbers || !upperCase || !lowerCase || !special) {
+      window.alert ("Please select 'ok' on NUMBERS, UPPER CASE, LOWER CASE, or SPECIAL CHARACTERS.")
+    }
 }
 
 // Assignment Code
