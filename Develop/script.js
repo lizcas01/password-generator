@@ -5,7 +5,7 @@ var lowerCase = ('a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p'
 var special = ('!','@','#','$','%','^','&','*','(',')','-','_','=','+',"[",'{',']','}',';',':',"'",'"','|',',','<',".",'>','/','?');
 
 function generatePassword() {
-  var password = [];
+  var acceptPassword = [];
   var passwordLength = window.prompt("From 8-128 characters, how long do you want your password?");
 
 // Password Length Confirmation 
@@ -29,11 +29,17 @@ function generatePassword() {
     }
   
 // Concat Arrays
-  password = numbers.concat(numbers);
-  password = upperCase.concat(upperCase);
-  password = lowerCase.concat(lowerCase);
-  password = special.concat(special);
+  acceptPassword = numbers.concat(numbers);
+  acceptPassword = upperCase.concat(upperCase);
+  acceptPassword = lowerCase.concat(lowerCase);
+  acceptPassword = special.concat(special);
 
+// For-Loops (Took directly from activity 13 and mini-project)
+for (var i = 0; i < passwordLength; i++) {
+  acceptPassword += Math.floor(Math.random() * acceptPassword.length);
+}  
+
+  return password; 
 }
 
 // Assignment Code
