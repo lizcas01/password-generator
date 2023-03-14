@@ -12,10 +12,10 @@ function generatePassword() {
     if (passLength < 8) {
       window.alert ("Please select a number from 8-128.")
     } 
-    else if (password > 128) {
+    else if (passLength > 128) {
       window.alert ("Please select a number from 8-128.")
     }
-    else if (isNaN(password)) {
+    else if (isNaN(passLength)) {
       window.alert ("Please choose a number from 8-128.")
     }
   
@@ -47,10 +47,10 @@ function generatePassword() {
   console.log(acceptPassword);
   
 // For-Loops (Took directly from activity 13 and mini-project)
-  password = "";
-  for (var i = 0; i < passLength; i++) {
-    var randomPass = Math.floor(Math.random() * acceptPassword.length);
-    password += acceptPassword[randomPass];
+password = ""  
+for (var i = 0; i < passLength; i++) {
+    var index = Math.floor(Math.random() * (acceptPassword.length));
+    password += acceptPassword[index];
   
   }
   return password;
