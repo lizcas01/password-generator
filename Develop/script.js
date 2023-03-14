@@ -6,40 +6,54 @@ var special = ('!','@','#','$','%','^','&','*','(',')','-','_','=','+',"[",'{','
 
 function generatePassword() {
   var acceptPassword = [];
-  var passwordLength = window.prompt("From 8-128 characters, how long do you want your password?");
+  var passLength = window.prompt("From 8-128 characters, how long do you want your password?");
 
 // Password Length Confirmation 
-    if (passwordLength < 8) {
+    if (passLength < 8) {
       window.alert ("Please select a number from 8-128.")
     } 
-    else if (passwordLength > 128) {
+    else if (password > 128) {
       window.alert ("Please select a number from 8-128.")
     }
-    else if (isNaN(passwordLength)) {
+    else if (isNaN(password)) {
       window.alert ("Please choose a number from 8-128.")
     }
   
-// Charcter Types Confirmations
-  var numbers = confirm("Would you like to include NUMBERS in your password?");
-  var upperCase = confirm("Would you like to include UPPER CASE LETTERS in your password?");
-  var lowerCase = confirm("Would you like to include LOWER CASE LETTERS in your password?");
-  var special = confirm("Would you like to include SPECIAL CHARACTERS in your password?");
-    if (!numbers || !upperCase || !lowerCase || !special) {
-      window.alert ("Please select 'ok' on NUMBERS, UPPER CASE, LOWER CASE, or SPECIAL CHARACTERS.")
+// Charcter Types Confirmations and Validation
+  var numbersConfirm = confirm("Would you like to include NUMBERS in your password?");
+    if (numbersConfirm === true) {
+      acceptPassword += numbers;
     }
   
-// Concat Arrays
-  acceptPassword = numbers.concat(numbers);
-  acceptPassword = upperCase.concat(upperCase);
-  acceptPassword = lowerCase.concat(lowerCase);
-  acceptPassword = special.concat(special);
+  var upperCaseConfirm = confirm("Would you like to include UPPER CASE LETTERS in your password?");
+    if (upperCaseConfirm === true) {
+      acceptPassword += upperCase;
+    }
+  
+  var lowerCaseConfirm = confirm("Would you like to include LOWER CASE LETTERS in your password?");
+    if (lowerCaseConfirm === true) {
+      acceptPassword += lowerCase;
+    }
+  
+  var specialConfirm = confirm("Would you like to include SPECIAL CHARACTERS in your password?");
+    if (specialConfirm === true) {
+      acceptPassword += special;
+    } 
 
+    if (!numbers || !upperCase || !lowerCase || !special) {
+        window.alert ("Please select 'ok' on NUMBERS, UPPER CASE, LOWER CASE, or SPECIAL CHARACTERS.")
+    }
+
+  console.log(acceptPassword);
+  
 // For-Loops (Took directly from activity 13 and mini-project)
-for (var i = 0; i < passwordLength; i++) {
-  acceptPassword += Math.floor(Math.random() * acceptPassword.length);
-}  
-
-  return password; 
+  password = "";
+  for (var i = 0; i < passLength; i++) {
+    var randomPass = Math.floor(Math.random() * acceptPassword.length);
+    password += acceptPassword[randomPass];
+  
+  }
+  return password;
 }
 
 // Assignment Code
