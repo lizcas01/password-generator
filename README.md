@@ -6,7 +6,7 @@ N/A
 ## Deployed Site
 N/A
 ## Usage
-![Demopage](assets/images/03-javascript-homework-demo.png)
+![Demopage](assets/03-javascript-homework-demo.png)
 To use this password generator, click on the red button. The site will then proceed to show you a pop-up asking how long you want your password to be. After entering an acceptable number, you will then have to answer more prompts until a password is generated.
 ## License
 Please refer to the LICENSE in the repo.
