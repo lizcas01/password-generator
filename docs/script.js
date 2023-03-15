@@ -15,7 +15,7 @@ function generatePassword() {
     else if (password > 128) {
       window.alert ("Please select a number from 8-128.")
     }
-    else if (isNaN(password)) {
+    else if (isNaN(passLength)) {
       window.alert ("Please choose a number from 8-128.")
     }
   
