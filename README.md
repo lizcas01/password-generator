@@ -4,7 +4,7 @@ For this challenge, we created a password generator for employees who have acces
 ## Installation 
 N/A
 ## Deployed Site
-N/A
+https://lizcas01.github.io/password-generator/
 ## Usage
 ![Demopage](assets/images/03-javascript-homework-demo.png)
 To use this password generator, click on the red button. The site will then proceed to show you a pop-up asking how long you want your password to be. After entering an acceptable number, you will then have to answer more prompts until a password is generated.
