@@ -1,6 +1,6 @@
 # Password Generator
 ## Description
-For this challenge, we created a password generator for employees who have access to sensitive data and want a stronger password for better security. This was the first assignment to require Javascript and to be honest, I struggled quite a bit. My motivation for this project was to figure out the commands which I did. I learned what commands were most appropriate for this challenge and other commands that will most likely be needed in the future. 
+For this challenge, we created a password generator for employees who have access to sensitive data and want a stronger password for better security. This was the first assignment to require Javascript and to be honest, I struggled quite a bit. My motivation for this project was to figure out the commands which I did. I learned what commands were most appropriate for this challenge and other commands that will most likely be needed in the future. I also learned more about the "+=" command and took the opportunity to use it during this challenge.
 ## Installation 
 N/A
 ## Deployed Site
