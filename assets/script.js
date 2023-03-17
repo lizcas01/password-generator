@@ -21,23 +21,23 @@ function generatePassword() {
   
 // Charcter Types Confirmations and Validation
   var numbersConfirm = confirm("Would you like to include NUMBERS in your password?");
-    if (numbersConfirm === true) {
-      acceptPassword += numbers;
+    if (numbersConfirm == true) {
+      acceptPassword = acceptPassword.concat(numbers);
     }
   
   var upperCaseConfirm = confirm("Would you like to include UPPER CASE LETTERS in your password?");
-    if (upperCaseConfirm === true) {
-      acceptPassword += upperCase;
+    if (upperCaseConfirm == true) {
+      acceptPassword = acceptPassword.concat(upperCase);
     }
   
   var lowerCaseConfirm = confirm("Would you like to include LOWER CASE LETTERS in your password?");
-    if (lowerCaseConfirm === true) {
-      acceptPassword += lowerCase;
+    if (lowerCaseConfirm == true) {
+      acceptPassword = acceptPassword.concat(lowerCase);
     }
   
   var specialConfirm = confirm("Would you like to include SPECIAL CHARACTERS in your password?");
-    if (specialConfirm === true) {
-      acceptPassword += special;
+    if (specialConfirm == true) {
+      acceptPassword = acceptPassword.concat(special);
     } 
 
     if (!numbers || !upperCase || !lowerCase || !special) {
